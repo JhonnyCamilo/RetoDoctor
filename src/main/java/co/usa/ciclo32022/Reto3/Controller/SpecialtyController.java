@@ -38,7 +38,8 @@ public class SpecialtyController {
         return specialtyService.save(specialtyModel);
     }
     @DeleteMapping("/{id}")
-    public boolean deleteSpecialty(@PathVariable Integer id){
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public boolean deleteSpecialty(@PathVariable("id")  int id){
         return specialtyService.deleteSpecialty(id);
     }
     @PutMapping("/update")
