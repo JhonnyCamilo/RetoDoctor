@@ -37,7 +37,7 @@ public class SpecialtyController {
     public SpecialtyModel saveSpecialty(@RequestBody SpecialtyModel specialtyModel){
         return specialtyService.save(specialtyModel);
     }
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public boolean deleteSpecialty(@PathVariable Integer id){
         return specialtyService.deleteSpecialty(id);
     }
